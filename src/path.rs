@@ -62,9 +62,9 @@ impl<'a> S3Path<'a> {
     /// See [bucket nameing rules](https://docs.aws.amazon.com/AmazonS3/latest/dev/BucketRestrictions.html#bucketnamingrules)
     #[must_use]
     pub fn check_bucket_name(name: &str) -> bool {
-        if !(3_usize..64).contains(&name.len()) {
-            return false;
-        }
+        // if !(3_usize..64).contains(&name.len()) {
+        //     return false;
+        // }
 
         if !name
             .as_bytes()
